@@ -54,3 +54,8 @@ App.launchScreens({
   'android_xhdpi_portrait': 'resources/Android/res/drawable-xhdpi/screen.png',
   'android_xhdpi_landscape': 'resources/Android/res/drawable-land-xhdpi/screen.png'
 });
+
+App.configurePlugin('com.phonegap.plugins.facebookconnect', {
+  APP_ID: '1663871777196940',
+  APP_NAME: 'ionic-sample - Test1'
+});

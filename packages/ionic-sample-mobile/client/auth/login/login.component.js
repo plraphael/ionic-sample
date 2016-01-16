@@ -5,10 +5,24 @@ angular.module("ionic-sample.mobile").directive('login', function() {
     controllerAs: 'login',
     controller: function ($scope, $reactive, $state) {
       $reactive(this).attach($scope);
- 
+      
+      Accounts.onLogin(() => {
+        $state.go('home');
+      });
       
       this.loginWithFacebook = () => {
         console.log('login with facebook');
+        var options = {
+          //loginStyle: 'redirect',
+          //redirectUrl: Meteor.absoluteUrl('home')
+        };
+        Meteor.loginWithFacebook(options, (err) => {
+          if(!err) {
+            console.log('facebook login successful');
+          } else {
+            console.log('facebok login error', err);
+          }
+        })
       };
     }
   }
