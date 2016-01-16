@@ -1,12 +1,12 @@
-angular.module("ionic-sample.mobile").directive('home', function() {
-  return {
-    restrict: 'E',
-    templateUrl: '/packages/ionic-sample-mobile/client/home/home.html',
-    controllerAs: 'home',
-    controller: function ($scope, $reactive, $state) {
-      $reactive(this).attach($scope);
+angular.module("ionic-sample.mobile").controller('HomeCtrl', 
+  function ($scope, $reactive, $state, $ionicSideMenuDelegate) {
+    $reactive(this).attach($scope);
 
-      console.log('home');
+    console.log('home');
+    
+    $scope.toggleMenu = () => {
+      console.log('open menu');
+      $ionicSideMenuDelegate.toggleLeft();
     }
   }
-});
+);

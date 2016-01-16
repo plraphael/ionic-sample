@@ -20,6 +20,5 @@ accounts-password
 angularui:angular-ui-router
 less
 momentjs:moment
-ionic-sample-mobile
-dotansimha:accounts-ui-angular
 particle4dev:cordova-fb
+ionic-sample-mobile

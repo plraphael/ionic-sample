@@ -8,7 +8,9 @@ angular.module('ionic-sample').config(function ($urlRouterProvider, $stateProvid
     })
     .state('home', {
       url: '/home',
-      template: '<home></home>',
+      templateUrl: '/packages/ionic-sample-mobile/client/home/home.html',
+      controller: 'HomeCtrl',
+      controllerAs: 'home',
       resolve: {
         currentUser: ($q) => {
           console.log('%%%%%%%%%%% RESOLVE FUNCTION');
@@ -20,7 +22,20 @@ angular.module('ionic-sample').config(function ($urlRouterProvider, $stateProvid
           }
         }
       }
-    });
+    })
+    .state('tab', {
+      url: '/tab',
+      abstract: true,
+      template: '<tabs></tabs>'
+    })
+    .state('tab.chats', {
+      url: '/chats',
+      views: {
+        'tab-chats': {
+          template: '<tab-chat></tab-chat>'
+        }
+      }
+    });;
 
   $urlRouterProvider.otherwise("/home");
 })
