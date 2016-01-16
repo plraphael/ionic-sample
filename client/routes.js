@@ -6,38 +6,58 @@ angular.module('ionic-sample').config(function ($urlRouterProvider, $stateProvid
       url: '/login',
       template: '<login></login>'
     })
-    .state('home', {
-      url: '/home',
-      templateUrl: '/packages/ionic-sample-mobile/client/home/home.html',
-      controller: 'HomeCtrl',
-      controllerAs: 'home',
-      resolve: {
-        currentUser: ($q) => {
-          console.log('%%%%%%%%%%% RESOLVE FUNCTION');
-          if (Meteor.userId() == null) {
-            return $q.reject('AUTH_REQUIRED');
-          }
-          else {
-            return $q.resolve();
-          }
-        }
-      }
-    })
     .state('tab', {
       url: '/tab',
       abstract: true,
-      template: '<tabs></tabs>'
+      template: '<tabs></tabs>',
     })
-    .state('tab.chats', {
-      url: '/chats',
+    .state('tab.home', {
+      url: '/home',
       views: {
-        'tab-chats': {
-          template: '<tab-chat></tab-chat>'
+        'tab-home': {
+          templateUrl: '/packages/ionic-sample-mobile/client/home/home.html',
+          controller: 'HomeCtrl',
+          controllerAs: 'home',
+          resolve: {
+            currentUser: ($q) => {
+              console.log('%%%%%%%%%%% RESOLVE FUNCTION');
+              if (Meteor.userId() == null) {
+                return $q.reject('AUTH_REQUIRED');
+              }
+              else {
+                return $q.resolve();
+              }
+            }
+          }
         }
       }
-    });;
+    })
+    .state('tab.classes', {
+      url: '/classes',
+      views: {
+        'tab-classes': {
+          template: '<classes></classes>'
+        }
+      }
+    })
+    .state('tab.workout', {
+      url: '/workout',
+      views: {
+        'tab-workout': {
+          template: '<workout></workout>'
+        }
+      }
+    })
+    .state('tab.activities', {
+      url: '/activities',
+      views: {
+        'tab-activities': {
+          template: '<activities></activities>'
+        }
+      }
+    });
 
-  $urlRouterProvider.otherwise("/home");
+  $urlRouterProvider.otherwise("/tab/home");
 })
 .run(function ($rootScope, $state) {
   $rootScope.$on('$stateChangeError', function (event, toState, toParams, fromState, fromParams, error) {

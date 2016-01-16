@@ -28,8 +28,20 @@ Package.onUse(function(api) {
     'client/auth/login/login.html',
     'client/auth/login/styles/login.less',
 
+    'client/tabs/tabs.component.js',
+    'client/tabs/tabs.html',
+
     'client/home/home.component.js',
     'client/home/home.html',
+
+    'client/classes/classes.component.js',
+    'client/classes/classes.html',
+
+    'client/workout/workout.component.js',
+    'client/workout/workout.html',
+
+    'client/activities/activities.component.js',
+    'client/activities/activities.html',
     
   ], 'client');
 });

@@ -7,7 +7,7 @@ angular.module("ionic-sample.mobile").directive('login', function() {
       $reactive(this).attach($scope);
       
       Accounts.onLogin(() => {
-        $state.go('home');
+        $state.go('tab.home');
       });
       
       this.loginWithFacebook = () => {
