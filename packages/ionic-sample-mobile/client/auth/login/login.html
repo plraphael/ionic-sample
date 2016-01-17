@@ -1,11 +1,35 @@
 <ion-view hide-nav-bar="true">
 
   <ion-content class="login-page" scroll="false">
-    
-     <div>
-      Login page
-     </div>
-    <button class="button" ng-click="login.loginWithFacebook()">Login with Facebook</button>
+    <ion-slide-box class="slide-container" on-slide-changed="slideHasChanged($index)">
+      <ion-slide>
+        <div class="">
+          <img src="/images/bem-vindo-placeholder.jpg">
+          <h3>Seja bem-vindo!</h3>
+          <p>Conheça o seu novo jeito de praticar esportes. Um novo serviço que vai mexer com você.</p>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="">
+          <img src="/images/bem-vindo-placeholder2.jpg">
+          <h3>Treinos e Aulas</h3>
+          <p>Obtenha seus treinos de musculação rapidamente, pegue a senha para suas aulas e interaja com seu professor todos os dias.</p>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="">
+          <img src="/images/bem-vindo-placeholder3.jpg">
+          <h3>Clube Vantagens</h3>
+          <p>Ganhe pontos e troque por vantagens exclusivas da sua academia ou ainda treine em outras academias, seja onde estiver.</p>
+        </div>
+        <div class="row">
+          <button class="button" ng-click="login.loginWithFacebook()">
+            <i class="icon ion-social-facebook"></i>
+            Comece agora!
+          </button>
+        </div>
+      </ion-slide>
+    </ion-slide-box>    
 
   </ion-content>
 
