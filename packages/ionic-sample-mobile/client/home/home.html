@@ -7,7 +7,14 @@
   
 
     <ion-content class="home-page has-header">
-      Início
+      <div class="time-info">
+        <p>Curitiba/PR</p>
+        <ds-widget-clock theme="dark" class="clock" data-show-digital digital-format="format">
+        </ds-widget-clock>
+        <p>{{day}}</p>
+
+        <i class="weather-icon wi wi-day-lightning"></i>
+      </div>
     </ion-content>
 
 

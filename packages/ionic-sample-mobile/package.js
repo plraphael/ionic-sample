@@ -14,8 +14,10 @@ Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
   api.use('angular');
   api.use('driftyco:ionic');
-  api.use('momentjs:moment');
   api.use('less');
+  api.use('momentjs:moment');
+  api.use('plraphael:angular-ui-clock');
+  api.use('russ:weather-icons');
 
   api.addFiles([
     'client/lib/module.js',
@@ -33,6 +35,7 @@ Package.onUse(function(api) {
 
     'client/home/home.component.js',
     'client/home/home.html',
+    'client/home/styles/home.less',
 
     'client/classes/classes.component.js',
     'client/classes/classes.html',

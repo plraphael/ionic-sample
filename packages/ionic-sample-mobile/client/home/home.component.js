@@ -8,5 +8,12 @@ angular.module("ionic-sample.mobile").controller('HomeCtrl',
       console.log('open menu');
       $ionicSideMenuDelegate.toggleLeft();
     }
+
+    $scope.format = 'hh:mm:ss';
+
+    moment.locale('pt', {
+      weekdays : "Domingo-Segunda-Terça-Quarta-Quinta-Sexta-Sábado".split("-"),
+    });
+    $scope.day = moment().format('dddd');
   }
 );
