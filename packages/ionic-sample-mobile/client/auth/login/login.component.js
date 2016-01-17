@@ -13,16 +13,11 @@ angular.module("ionic-sample.mobile").directive('login', function() {
       this.loginWithFacebook = () => {
         console.log('login with facebook');
         var options = {
+          //requestPermissions: ['public_profile', 'email']
           //loginStyle: 'redirect',
           //redirectUrl: Meteor.absoluteUrl('home')
         };
-        Meteor.loginWithFacebook(options, (err) => {
-          if(!err) {
-            console.log('facebook login successful');
-          } else {
-            console.log('facebok login error', err);
-          }
-        })
+        Meteor.loginWithFacebook(options);
       };
     }
   }

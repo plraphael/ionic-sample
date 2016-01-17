@@ -42,6 +42,10 @@ Package.onUse(function(api) {
 
     'client/activities/activities.component.js',
     'client/activities/activities.html',
+
+    'client/profile/profile.component.js',
+    'client/profile/profile.html',
+    'client/profile/styles/profile.less',
     
   ], 'client');
 });

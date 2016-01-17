@@ -2,7 +2,7 @@ angular.module('ionic-sample.mobile').directive('indexIonicSample', function () 
   return {
     restrict: 'E',
     templateUrl: '/packages/ionic-sample-mobile/client/index/index-ionic-sample.html',
-    controllerAs: 'indexIonicSample',
+    controllerAs: 'index',
     controller: function ($scope, $reactive, $state) {
       $reactive(this).attach($scope);
 

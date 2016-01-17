@@ -1,0 +1,26 @@
+<ion-view title="Meu Perfil">
+  <ion-nav-buttons side="primary">
+    <button class="button button-icon ion-arrow-left-c" ng-click="goBack()">
+    </button>
+  </ion-nav-buttons>
+
+  
+
+    <ion-content class="profile-page has-header">
+      <div class="info-container">
+        <img class="user-img" src="{{userImg()}}">
+        <p>{{userName()}}</p>
+        <span>85 kg</span>
+        <span>1,85 m</span>
+      </div>
+
+      <div class="item item-icon-left user-email">
+        <i class="icon ion-email"></i>
+        <p>{{userEmail()}}</p>
+      </div>
+    </ion-content>
+
+
+
+
+</ion-view>

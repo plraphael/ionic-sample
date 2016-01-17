@@ -8,7 +8,7 @@ App.accessRule('*.gstatic.com/*');
 App.info({
   id: 'br.com.plraphael.ionic-sample',
   name: 'Ionic Sample',
-  description: 'Bla',
+  description: 'Ionic Sample',
   version: "0.1"
 });
 
